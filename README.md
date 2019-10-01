@@ -11,3 +11,10 @@ App for Apple Watch that calculates currency values
 * Tables
 * Picker
 * Slider
+
+
+### Screenshots ###
+
+| Home | Currencies | Results |
+| ------------------- | :------------------: | :------------------: |
+|  | | |
