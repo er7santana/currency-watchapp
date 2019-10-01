@@ -17,4 +17,6 @@ App for Apple Watch that calculates currency values
 
 | Home | Currencies | Results |
 | ------------------- | :------------------: | :------------------: |
-|  | | |
+| ![Screenshot](/screenshots/1.png) | ![Screenshot](/screenshots/2.png) | ![Screenshot](/screenshots/3.png) |
+
+
