@@ -6,10 +6,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
     </dependencies>
     <scenes>
-        <!--WatchFX-->
+        <!--Shaft$$-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="home" title="WatchFX" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Currency_WatchKit_App" customModuleProvider="target">
+                <controller identifier="home" title="Shaft$$" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Currency_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label height="0.33000000000000002" alignment="center" text="1000" id="LVR-LS-X6R">
                             <fontDescription key="font" type="system" pointSize="52"/>
