@@ -14,6 +14,10 @@
 		1460D44F23428A5B00946AA8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D44E23428A5B00946AA8 /* InterfaceController.swift */; };
 		1460D45123428A5B00946AA8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D45023428A5B00946AA8 /* ExtensionDelegate.swift */; };
 		1460D45323428A5C00946AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1460D45223428A5C00946AA8 /* Assets.xcassets */; };
+		1460D46323428F6300946AA8 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D46223428F6300946AA8 /* CurrencyRow.swift */; };
+		1460D465234294E300946AA8 /* CurrenciesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D464234294E300946AA8 /* CurrenciesInterfaceController.swift */; };
+		1460D4672342A02300946AA8 /* ResultsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D4662342A02300946AA8 /* ResultsInterfaceController.swift */; };
+		1460D4692342A68300946AA8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460D4682342A68300946AA8 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		1460D45023428A5B00946AA8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1460D45223428A5C00946AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1460D45423428A5C00946AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1460D46223428F6300946AA8 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
+		1460D464234294E300946AA8 /* CurrenciesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesInterfaceController.swift; sourceTree = "<group>"; };
+		1460D4662342A02300946AA8 /* ResultsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInterfaceController.swift; sourceTree = "<group>"; };
+		1460D4682342A68300946AA8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,13 @@
 			isa = PBXGroup;
 			children = (
 				1460D44E23428A5B00946AA8 /* InterfaceController.swift */,
+				1460D464234294E300946AA8 /* CurrenciesInterfaceController.swift */,
+				1460D4662342A02300946AA8 /* ResultsInterfaceController.swift */,
+				1460D46223428F6300946AA8 /* CurrencyRow.swift */,
 				1460D45023428A5B00946AA8 /* ExtensionDelegate.swift */,
 				1460D45223428A5C00946AA8 /* Assets.xcassets */,
 				1460D45423428A5C00946AA8 /* Info.plist */,
+				1460D4682342A68300946AA8 /* SwiftyJSON.swift */,
 			);
 			path = "Currency WatchKit Extension";
 			sourceTree = "<group>";
@@ -249,7 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1460D4672342A02300946AA8 /* ResultsInterfaceController.swift in Sources */,
+				1460D46323428F6300946AA8 /* CurrencyRow.swift in Sources */,
 				1460D45123428A5B00946AA8 /* ExtensionDelegate.swift in Sources */,
+				1460D4692342A68300946AA8 /* SwiftyJSON.swift in Sources */,
+				1460D465234294E300946AA8 /* CurrenciesInterfaceController.swift in Sources */,
 				1460D44F23428A5B00946AA8 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,113 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14868" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--WatchFX-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="home" title="WatchFX" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Currency_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label height="0.33000000000000002" alignment="center" text="1000" id="LVR-LS-X6R">
+                            <fontDescription key="font" type="system" pointSize="52"/>
+                        </label>
+                        <slider width="1" height="0.33000000000000002" alignment="left" continuous="YES" value="500" maximum="1000" steps="50" id="Tjz-NF-UOC">
+                            <connections>
+                                <action selector="amountChanged:" destination="AgC-eL-Hgc" id="ezf-Dx-Gtg"/>
+                            </connections>
+                        </slider>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="tyS-fm-2Je">
+                            <items>
+                                <picker width="0.59999999999999998" height="1" alignment="left" focusStyle="stack" id="y3r-mS-Yhj">
+                                    <connections>
+                                        <action selector="baseCurrencyChanged:" destination="AgC-eL-Hgc" id="mIh-1s-Opb"/>
+                                    </connections>
+                                </picker>
+                                <button width="0.40000000000000002" height="1" alignment="left" title="Go" id="NSo-i3-b7m">
+                                    <connections>
+                                        <action selector="convertTapped" destination="AgC-eL-Hgc" id="SP0-ZK-r8J"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="amountLabel" destination="LVR-LS-X6R" id="qM5-xQ-Wa5"/>
+                        <outlet property="amountSlider" destination="Tjz-NF-UOC" id="Nj2-ZT-Kud"/>
+                        <outlet property="currencyPicker" destination="y3r-mS-Yhj" id="Z0z-SV-BIJ"/>
+                        <segue destination="ujy-mh-D8a" kind="relationship" relationship="nextPage" id="Qsz-O7-oR5"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="118" y="73"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="w1P-dz-8Xi">
+            <objects>
+                <controller identifier="Results" id="NtZ-sp-ewX" customClass="ResultsInterfaceController" customModule="Currency_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" hidden="YES" id="Q67-uF-Emx">
+                            <items>
+                                <tableRow identifier="Row" selectable="NO" id="jVy-xb-Yqz" customClass="CurrencyRow" customModule="Currency_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="esI-Uq-m3l">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="1aO-2H-SJY"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="esI-Uq-m3l" id="Ncb-Th-BLI"/>
+                                        <outlet property="textLabel" destination="1aO-2H-SJY" id="qSX-F4-IOd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" hidden="YES" title="Done" id="Otx-JT-7EL">
+                            <color key="backgroundColor" red="0.029882156732809709" green="0.40341765703282972" blue="0.89803921568627454" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="doneButtonTapped" destination="NtZ-sp-ewX" id="7Cg-ar-R7a"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" verticalAlignment="center" text="Fetching..." id="DER-H2-tJV"/>
+                    </items>
+                    <connections>
+                        <outlet property="doneButton" destination="Otx-JT-7EL" id="HAJ-yv-Fcf"/>
+                        <outlet property="statusLabel" destination="DER-H2-tJV" id="eif-bF-STg"/>
+                        <outlet property="table" destination="Q67-uF-Emx" id="hdB-cK-CRD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="118" y="386"/>
+        </scene>
+        <!--Currencies-->
+        <scene sceneID="ItK-Wy-aaD">
+            <objects>
+                <controller identifier="currencies" title="Currencies" id="ujy-mh-D8a" customClass="CurrenciesInterfaceController" customModule="Currency_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="AqO-o9-8b0">
+                            <items>
+                                <tableRow identifier="Row" id="xpz-Ym-Om8" customClass="CurrencyRow" customModule="Currency_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="MSV-Id-W2d">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="geN-Mm-5o3"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="MSV-Id-W2d" id="Ljc-h6-PnL"/>
+                                        <outlet property="textLabel" destination="geN-Mm-5o3" id="93m-Cr-pIt"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="AqO-o9-8b0" id="yF7-E2-NGK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="382" y="73"/>
         </scene>
     </scenes>
 </document>
